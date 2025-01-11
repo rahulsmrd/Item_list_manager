@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Item List Manager</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><img src="logo.jpg" alt="Image"></li>
+        <li><a href="#" style="text-align: center;">Item List Manager</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="root"></div>
+  
+  <!-- React and ReactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  
+  <!-- Babel -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <!-- React Code -->
+  <script type="text/babel">
+    function App() {
+      const [items, setItems] = React.useState([]);
+      const [inputValue, setInputValue] = React.useState("");
+
+      const addItem = () => {
+        if (inputValue.trim() === "") return;
+        setItems([...items, inputValue]);
+        setInputValue("");
+      };
+
+      return (
+        <div id="">
+          <h1>Item List Manager</h1>
+          <div style={{ marginBottom: "10px" }}>
+            <input
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              placeholder="Enter item"/>
+            <button
+              onClick={addItem}>
+              Add Item
+            </button>
+          </div>
+          <ul>
+            {items.map((item, index) => (
+              <li key={index}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById("root"));
+  </script>
+</body>
+</html>

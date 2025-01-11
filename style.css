@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header{
+    background-color: #4e5b74;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+header nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 36px;
+}
+
+header nav ul li a:hover{
+    color: #cacaca;
+}
+
+header nav ul li img{
+    width: 50px;
+    border-radius: 100px;
+}
+
+#root{
+    margin: 10px 30px;
+    background-color: white;
+    border: 2px solid rgb(200, 200, 200);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#root h1{
+    margin-bottom: 20px;
+}
+
+#root input{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    font-size: 18px;
+}
+
+#root button{
+    width: 50%;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    font-size: 15px;
+}
+
+#root button:hover{
+    background-color: white;
+    border: 2px solid green;
+    color: green;
+}
+
+#root ul{
+    margin: 10px 0 10px 40px;
+    font-size: 18px;
+}
+
+#root ul li{
+    margin-bottom: 10px;
+}
